@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+ html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root {
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* .app {
+  width: 100%;
+} */
+/*
+ * Global layout stuff
+ */
+ 
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+
+main.container{
+  /* width: 90%; */
+  background-color: #f3f1ed;  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width: 1024px) {
+
+  .app {
+    flex-direction: row;
+    align-items: flex-start;
   }
-  to {
-    transform: rotate(360deg);
+
+  main.container {
+    margin: 1.5em;
+    margin-top: 176px;
+    max-width: 45%;
   }
 }
